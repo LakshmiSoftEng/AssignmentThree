@@ -1,0 +1,46 @@
+import {Fragment} from "react";
+import ListGroup from "./components/ListGroup";
+
+interface Props {
+items: string[];
+heading: string;
+
+onSelectItem: (item: string) => void;
+}
+import { useState } from "react";
+function ListGroup({items, heading}: Props) {
+    constant items=[
+        "Newyork",
+        "San Francisco",
+        "Tokyo",
+        "London",
+        "Paris"
+    ];
+    let selectedIndex = 0;
+    const arr = useState(-1);
+    arr[0]
+    arr[1]
+    const handleClick = (event : MouseEvent) => console.log(event);
+    if(items.length === 0){
+        return <><h1>List</h1><p>No item found</p>;
+    }
+    {items.map(item => <li>{item}</li>)}
+    return(
+        <>
+        <h1>List</h1>
+        {items.length === 0 ? <p>No item found</p> : null;;}
+        {items.length === 0 && <p>No item foound</p>}
+<h1>List</h1>
+ <ul className="list-group">
+ {items.map((item, index) =>)
+ <li
+ className="list-group-item"
+ key={item}
+ onClick={(event) => console.log(item)}
+ {item}
+ </li>
+ }
+</ul>;
+    );
+}
+export default ListGroup;
